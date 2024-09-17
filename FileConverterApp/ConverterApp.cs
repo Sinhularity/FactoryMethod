@@ -4,8 +4,7 @@
     static void Main(string[] args)
     {
         // Fábricas concretas
-        IFileConverterFactory docxFactory = new DocxFactory();
-        IFileConverterFactory pdfFactory = new PDFFactory();
+        IFileConverterFactory converterFactory = null;
         // Convertidor base
         IFileConverter fileConverter;
 
@@ -22,13 +21,11 @@
                 {
                     case 1:
                         fileName = GetFileName();
-                        fileConverter = docxFactory.createFileConverter();
-                        fileConverter.Conversion(fileName);
+                        converterFactory = new DocxFactory();
                         break;
                     case 2:
                         fileName = GetFileName();
-                        fileConverter = pdfFactory.createFileConverter();
-                        fileConverter.Conversion(fileName);
+                        converterFactory = new PDFFactory();
                         break;
                     case 0:
                         break;
@@ -36,6 +33,9 @@
                         Console.WriteLine("Opción no válida, intenta de nuevo");
                         break;
                 }
+                
+                fileConverter = converterFactory.createFileConverter();
+                fileConverter.Conversion(fileName);
                 Console.WriteLine("-----------------------------");
                 Console.WriteLine("Se ha generado con éxito el/los archivo(s)");
                 Console.WriteLine("-----------------------------");
