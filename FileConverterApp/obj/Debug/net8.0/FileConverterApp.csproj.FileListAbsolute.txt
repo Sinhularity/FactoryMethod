@@ -60,3 +60,4 @@ C:\Users\Usuario-Final\FactoryMethod\FileConverterApp\obj\Debug\net8.0\FileConve
 C:\Users\Usuario-Final\FactoryMethod\FileConverterApp\obj\Debug\net8.0\ref\FileConverterApp.dll
 C:\Users\Usuario-Final\FactoryMethod\FileConverterApp\bin\Debug\net8.0\PdfiumViewer.dll
 C:\Users\Usuario-Final\FactoryMethod\FileConverterApp\bin\Debug\net8.0\nl\PdfiumViewer.resources.dll
+C:\Users\Usuario-Final\FactoryMethod\FileConverterApp\obj\Debug\net8.0\FileConverterApp.sourcelink.json

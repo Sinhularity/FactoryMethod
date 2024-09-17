@@ -1,9 +1,8 @@
-class DocxFactory
+class DocxFactory : IFileConverterFactory
 {
-    public IFileConverter getConvertFromDocx()
-    {
+   public IFileConverter createFileConverter() {
         return new ConvertFromDocx();
-    }
+   }
 
     public string getExtension()
     {
