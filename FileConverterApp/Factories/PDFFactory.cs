@@ -1,10 +1,11 @@
-class PDFFactory
+class PDFFactory : IFileConverterFactory
 {
-    public IFileConverter getConvertFromPDF() {
+    public IFileConverter createFileConverter() {
         return new ConvertFromPDF();
     }
 
     public string getExtension() {
         return ConvertFromPDF.EXTENSION;
     }
+    
 }
