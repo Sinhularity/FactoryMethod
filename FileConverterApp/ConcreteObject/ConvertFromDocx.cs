@@ -5,9 +5,8 @@ using SixLabors.ImageSharp.PixelFormats;
 class ConvertFromDocx : IFileConverter
 {
     private string defaultPath = IFileConverter.DEFAULT_PATH;
-    private string[] files = IFileConverter.ACTUAL_FILES;
     public const string EXTENSION = ".docx";
-    public const string OUTPUT_EXTENSION = IFileConverter.OUTPUT_EXTENSION;
+    private const string OUTPUT_EXTENSION = IFileConverter.OUTPUT_EXTENSION;
     public void Conversion(string fileName)
     {
         string inputFile = fileName + EXTENSION;
@@ -15,9 +14,6 @@ class ConvertFromDocx : IFileConverter
         string inputPath = Path.Combine(defaultPath, inputFile);
         string outputPath;
         Document docxDocument = new Document();
-
-        if (files.Any(file => file.Equals(fileName)))
-        {
 
             docxDocument.LoadFromFile(inputPath);
 
@@ -40,10 +36,5 @@ class ConvertFromDocx : IFileConverter
                     }
                 }
             }
-        }
-        else
-        {
-            Console.WriteLine("El archivo no existe...");
-        }
     }
 }
