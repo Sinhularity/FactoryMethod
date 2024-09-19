@@ -1,6 +1,10 @@
 ﻿class ConverterApp
 {
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 35c4b7d2a7007c5d8b28bb6afc1f964bcfdd4cf2
     static void Main(string[] args)
     {
         // Fábricas concretas
@@ -28,12 +32,20 @@
                         converterFactory = new PDFFactory();
                         break;
                     case 0:
+<<<<<<< HEAD
                         return;
+=======
+                        break;
+>>>>>>> 35c4b7d2a7007c5d8b28bb6afc1f964bcfdd4cf2
                     default:
                         Console.WriteLine("Opción no válida, intenta de nuevo");
                         break;
                 }
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 35c4b7d2a7007c5d8b28bb6afc1f964bcfdd4cf2
                 fileConverter = converterFactory.createFileConverter();
                 fileConverter.Conversion(fileName);
                 Console.WriteLine("-----------------------------");
