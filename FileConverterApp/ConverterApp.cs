@@ -1,10 +1,6 @@
 ﻿class ConverterApp
 {
-<<<<<<< HEAD
-
-=======
    
->>>>>>> 35c4b7d2a7007c5d8b28bb6afc1f964bcfdd4cf2
     static void Main(string[] args)
     {
         // Fábricas concretas
@@ -26,31 +22,25 @@
                     case 1:
                         fileName = GetFileName();
                         converterFactory = new DocxFactory();
+                        Console.WriteLine("-----------------------------");
+                        Console.WriteLine("Se ha generado con éxito el/los archivo(s)");
+                        Console.WriteLine("-----------------------------");
                         break;
                     case 2:
                         fileName = GetFileName();
                         converterFactory = new PDFFactory();
+                        Console.WriteLine("-----------------------------");
+                        Console.WriteLine("Se ha generado con éxito el/los archivo(s)");
+                        Console.WriteLine("-----------------------------");
                         break;
                     case 0:
-<<<<<<< HEAD
-                        return;
-=======
                         break;
->>>>>>> 35c4b7d2a7007c5d8b28bb6afc1f964bcfdd4cf2
                     default:
                         Console.WriteLine("Opción no válida, intenta de nuevo");
                         break;
                 }
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> 35c4b7d2a7007c5d8b28bb6afc1f964bcfdd4cf2
                 fileConverter = converterFactory.createFileConverter();
                 fileConverter.Conversion(fileName);
-                Console.WriteLine("-----------------------------");
-                Console.WriteLine("Se ha generado con éxito el/los archivo(s)");
-                Console.WriteLine("-----------------------------");
             }
             while (option != 0);
             return;
